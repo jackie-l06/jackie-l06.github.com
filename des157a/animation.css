@@ -1,0 +1,22 @@
+#line1 {
+    margin-left: 10%;
+    margin-top: -3.45%;
+    border-top: 6px solid white;
+    animation:  draw-line 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes draw-line {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        border-top: 6px solid white;
+    }
+
+    100% {
+        width: 175vh;
+        border-top: 6px solid white;
+    }
+}
