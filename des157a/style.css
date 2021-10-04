@@ -78,6 +78,11 @@ ol, ul {
     text-align: center;
 }
 
+ol li a:hover, ul li a:hover {
+    background-color: yellowgreen;
+    text-align: center;
+}
+
 li, a {
     list-style-type: none;
     text-decoration: none;
