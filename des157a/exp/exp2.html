@@ -12,21 +12,11 @@
 
     <script>
         var yourColor = prompt('pick your favorite color', '');
-
-
-        // var backColor = document.body.style.backgroundColor;
-        // for (var i=0; i< backColor.length; i++){
-        //     backColor[i] = 'red';
-
-        function changeColor(){
-            var backColor = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']; 
-
-            let yourColor = document.body.style.backgroundColor;
-            document.body.style.backgroundColor = '';
+           
+            document.body.style.backgroundColor = yourColor;
             
-        }
 
 
-
+        // Using prompt() ask users to input their favorite color from a list of colors. Then change the background color of the page to that color.
     </script>
 </html>
