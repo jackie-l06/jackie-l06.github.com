@@ -24,6 +24,10 @@ section{
     width: 1366px;
 }
 
+h2 {
+    text-align: center;
+}
+
 p {
     display: flex;
     
