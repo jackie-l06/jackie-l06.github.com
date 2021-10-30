@@ -1,7 +1,7 @@
 body {
     background-color: black;
-	font-family: 'Lora', serif;
-	font-weight: 300;
+    font-family: 'Lora', serif;
+    font-weight: 300;
 }
 
 img {
@@ -9,49 +9,55 @@ img {
     margin-left: 6%;
 }
 
-#img{
+#img {
     position: absolute;
     width: 200px;
     height: 200px;
     display: none;
     margin-left: 265px;
     margin-top: -233px;
-
 }
 
-.center{
-    position:absolute;
+.center {
+    position: absolute;
     margin: -270px 500px;
 }
 
 main {
     color: white;
-
 }
 
 form {
     display: grid;
     background: black;
+    width: 300px;
 }
 
-label {
-    padding: 10px;
+div {
+    display: flex;
+    align-items: baseline;
+}
 
-
+label,
+input {
+    display: block;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .photo {
     max-width: 450px;
     position: absolute;
-    top: 250px; 
-    right: 200px;
-    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    top: 230px;
+    right: 360px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     padding: 8px;
 }
 
 header {
-	background-color: black;
-	height:250px;
+    background-color: black;
+    height: 250px;
     width: 1366px;
     margin: auto;
 }
@@ -62,7 +68,7 @@ h1 {
     font-size: 100px;
     margin: 30px;
     margin-left: 1150px;
-    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     padding: 20px;
     width: 120px;
     height: 120px;
@@ -72,7 +78,7 @@ footer {
     margin-top: 50%;
     padding: 15px;
     text-align: center;
-    background-color:white;
+    background-color: white;
 }
 
 a:link {
@@ -84,4 +90,3 @@ a:link {
 data {
     margin-top: 20%;
 }
-

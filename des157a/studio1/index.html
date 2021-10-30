@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +14,11 @@
     <title>Mad Libs 2.0</title>
 
 </head>
+
 <body>
     <header>
         <h1>JL</h1>
-        <div><img id="ca" src = "images/designcomp.png" alt="camera" width="650" height="600"></div>
+        <div><img id="ca" src="images/designcomp.png" alt="camera" width="650" height="600"></div>
         <img src="images/star.png" id="img" alt="">
     </header>
 
@@ -25,154 +27,202 @@
 
     <main>
 
-    <div id="photo" class = "photo">
-        <form id = "happy">
-            <label>GIRL / BOY      <input id="sex" type = "text"></label>
-            <br>
-            <label>EYE COLOR.    <input id="color" type = "text"></label>
-            <br>
-            <label>A POSITIVE WORD YOU WOULD LIKE TO DESCRIBE A PERSON.    <input id="ness" type = "text"></label>
-            <br>
-            <label>CAT / DOG <input id="cat" type = "text"></label>
-            <br>
-            <label>ENTER A TYPE OF SNACK.      <input id="snack" type = "text" placeholder = "cookies"></label>
-            <br>
-            <label>AN ADJECTIVE DESCRIBES HAPPINESS.<input id="happy" type = "text" ></label>
-            <br>
-            <input type ="button" onclick="show()" value= "NEXT" >
-            <br>
-        </form>
+        <div id="photo" class="photo">
+            <form id="happy">
+                <fieldset>
+                    <legend>PLEASE SELECT</legend>
+                    <div>
+                        <input type="radio" name="gb" id="sex" value="girl">
+                        <label for="girl-yes">girl</label>
+                        <input type="radio" name="gb" id="sex" value="boy">
+                        <label for="boy-no">boy</label>
+                    </div>
+                </fieldset>
 
-        <form id = "sad" style="display: none"   >
-            <label>WOMAN / MAN<input id="man" type = "text"></label>
-            <br>
-            <label>AN ADJECTIVE YOUR WOULD LIKE TO DESCRIBE CLOTHING APPEARANCE. <input id="cloth" type = "text"></label>
-            <br>
-            <label>A NEGATIVE WORD YOU WOULD LIKE TO DESCRIBE A PERSON. <input id="person" type = "text"></label>
-            <br>
-            <label>AN ADJECTIVE DESCRIBES UNHAPPINESS. <input id="un" type = "text"></label>
-            <input type ="button"  onclick="sub()"  value= "SUBMIT" >
-        </form>
-    </div>
+                <br>
+                <label>EYE COLOR    <input id="color" type = "text"></label>
+                <br>
+                <label>AN ADJECTIVE   <input id="ness" type = "text"></label>
+                <br>
+
+                <fieldset>
+                    <legend>PLEASE SELECT</legend>
+                    <div>
+                        <input type="radio" name="cat" id="cat" value="cat">
+                        <label for="cat">cat</label>
+                        <input type="radio" name="cat" id="cat" value="dog">
+                        <label for="dog">dog</label>
+                    </div>
+                </fieldset>
+
+                <br>
+                <label>A TYPE OF SNACK     <input id="snack" type = "text" placeholder = "cookies"></label>
+                <br>
+                <label>AN ADJECTIVE<input id="happy" type = "text" ></label>
+                <br>
+                <input type="button" id="next" value="NEXT">
+                <br>
+            </form>
+
+            <form id="sad" style="display: none">
+                <fieldset>
+                    <legend>PLEASE SELECT</legend>
+                    <div>
+                        <input type="radio" name="man" id="man" value="woman">
+                        <label for="woman">woman</label>
+                        <input type="radio" name="man" id="man" value="man">
+                        <label for="man">man</label>
+                    </div>
+                </fieldset>
+
+                <br>
+                <label>AN ADJECTIVE <input id="cloth" type = "text"></label>
+                <br>
+                <label>AN ADJECTIVE <input id="person" type = "text"></label>
+                <br>
+                <label>AN ADJECTIVE <input id="un" type = "text"></label>
+                <input type="button" onclick="sub()" value="SUBMIT">
+            </form>
+        </div>
 
     </main>
 
     <script>
-        var timer;
-         var sex ;
-            var color ;
-            var ness ;
-            var cat ;
-            var cookie;
-            var sat;
-            var woman ;
-            var neglect ;
-            var gorgeous ;
-            var discontent;
+        let timer;
+        let sex;
+        let color;
+        let ness;
+        let cat;
+        let cookie;
+        let sat;
+        let woman;
+        let neglect;
+        let gorgeous;
+        let discontent;
+
+        function show() {
+            console.log(1);
 
 
-         function show(){
-             console.log(1);
+            clearInterval(timer);
+            var img = document.getElementById("img")
+            sex = document.getElementById("sex").value;
+            color = document.getElementById("color").value;
+            ness = document.getElementById("ness").value;
+            cat = document.getElementById("cat").value;
+            cookie = document.getElementById("snack").value;
+            sat = document.getElementById("happy").value;
 
-
-             clearInterval(timer);
-             var img = document.getElementById("img")
-               sex = document.getElementById("sex").value;
-             color = document.getElementById("color").value;
-             ness = document.getElementById("ness").value;
-             cat = document.getElementById("cat").value;
-             cookie = document.getElementById("snack").value;
-             sat = document.getElementById("happy").value;
-
-             timer = setInterval(function (){
+            timer = setInterval(function() {
                 img.style.display = "block";
+            }, 10);
 
+            window.setTimeout(function() {
+                window.clearTimeout(timer, 100)
+                img.style.display = 'none';
+                document.getElementById("sad").style.display = 'grid'
+                document.getElementById("happy").style.display = 'none'
+            }, 100)
 
-
-
-             },10);
-             window.setTimeout(function (){
-                 window.clearTimeout(timer,100)
-                 img.style.display='none';
-                 document.getElementById("sad").style.display = 'grid'
-                 document.getElementById("happy").style.display = 'none'
-             },100)
-
-  }
-
-  function sub() {
-      show();
-      //sleep(2000);
-
-      window.setTimeout(function () {
-           var photo = document.getElementById("photo")
-             photo.style.display = 'none';
-             var ca = document.getElementById('ca')
-             ca.style.display = 'none';
-
-
-             woman = document.getElementById("man").value;
-             neglect = document.getElementById("person").value;
-             gorgeous = document.getElementById("cloth").value;
-             discontent = document.getElementById('un').value;
-
-
-             var data = `The Wind Witness \n
-A gust of wind slowly wanders,
-Gently comes on top of a little `+ sex+`,
-She has watery `+color+` eyes,
-Fills with kindness and`+ness+` .\n
-She crouches down beside a frail `+cat+`,
-Softly and lightly pets the cat.
-She feeds the cat with a piece of `+cookie+`
-From her warm, little hands.\n
-The cat is very `+sat+`,
-A smile appears on the girl’s innocent face.
-Wind is delighted,
-Wind floats away with joy and cheer.\n
-Later, the wind comes to a `+woman+`,
-Who wears `+gorgeous+` and fancy cloth.
-The two old-aged women behind her,
-Who are carrying the heavy luggage.\n
-On noble woman’s face,
-there is only `+neglect+` and scorn.
-She can’t see the weariness from women’s faces.
-Wind floats away only with `+discontent+` and disappointment.\n`
-
-      var txt = document.getElementById("txt");
-      txt.innerText = data;
-
-
-      txt.style.display = 'block';
-      txt.style.margin = '-100px 500px';
-      txt.style.paddingTop = '40px';
-
-
-      },1000)
-
-
-
-  }
-
-  function sleep(numberMillis){
-        var now = new Date();
-        var exitTime = now.getTime() + numberMillis;
-        while (true) {
-            now = new Date();
-            if (now.getTime() > exitTime)
-            return;
         }
-    }
+
+        function sub() {
+            show();
+            //sleep(2000);
+
+            window.setTimeout(function() {
+                var photo = document.getElementById("photo")
+                photo.style.display = 'none';
+                var ca = document.getElementById('ca')
+                ca.style.display = 'none';
+
+
+                woman = document.getElementById("man").value;
+                neglect = document.getElementById("person").value;
+                gorgeous = document.getElementById("cloth").value;
+                discontent = document.getElementById('un').value;
+
+
+                let data = `The Wind Witness \n
+                <br>
+                <br>
+                A gust of wind slowly wanders,
+                <br>
+                Gently comes on top of a little ` + sex + `
+                <br>
+                She has watery ` + color + ` eyes,
+                <br>
+                Fills with kindness and ` + ness + `.\n
+                <br>
+                <br>
+                She crouches down beside a frail ` + cat + `,
+                <br>
+                Softly and lightly pets the cat.
+                <br>
+                She feeds the cat with a piece of ` + cookie + `
+                <br>
+                From her warm, little hands.\n
+                <br>
+                <br>
+                The cat is very ` + sat + `,
+                <br>
+                A smile appears on the girl’s innocent face.
+                <br>
+                Wind is delighted,
+                <br>
+                Wind floats away with joy and cheer.\n
+                <br>
+                <br>
+                Later, the wind comes to a ` + woman + `,
+                <br>
+                Who wears ` + gorgeous + ` and fancy cloth.
+                <br>
+                The two old-aged women behind her,
+                <br>
+                Who are carrying the heavy luggage.\n
+                <br>
+                <br>
+                On noble woman’s face,
+                <br>
+                there is only ` + neglect + ` and scorn.
+                <br>
+                She can’t see the weariness from women’s faces.
+                <br>
+                Wind floats away only with ` + discontent + ` and 
+                disappointment.\n`
+
+                let txt = document.getElementById("txt");
+                document.getElementById("txt").style.fontStyle = "italic";
+                txt.innerHTML = data;
+
+
+                txt.style.display = 'block';
+                txt.style.margin = '-100px 500px';
+                txt.style.paddingTop = '50px';
+
+            }, 1000)
 
 
 
+        }
+
+        function sleep(numberMillis) {
+            var now = new Date();
+            var exitTime = now.getTime() + numberMillis;
+            while (true) {
+                now = new Date();
+                if (now.getTime() > exitTime)
+                    return;
+            }
+        }
     </script>
 
-<footer>
-    <a href="mailto:&#106;&#099;&#101;&#108;&#117;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email Me</a>
-    <a href="https://validator.w3.org/check?uri=https://jackie-l06.github.io/des157">Valid Html</a>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
-</footer>
+    <footer>
+        <a href="mailto:&#106;&#099;&#101;&#108;&#117;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">Email Me</a>
+        <a href="https://validator.w3.org/check?uri=https://jackie-l06.github.io/des157">Valid Html</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+    </footer>
 
 </body>
+
 </html>
