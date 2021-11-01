@@ -1,17 +1,16 @@
 body {
     background-color: black;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
     color: white;
     height: 768px;
 }
 
 header {
-	background-color: black;
-	height:150px;
+    background-color: black;
+    height: 150px;
     width: 1366px;
     margin: auto;
-
 }
 
 h1 {
@@ -20,7 +19,18 @@ h1 {
     margin: 20px;
 }
 
-section{
+img {
+    padding: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+section {
     width: 1366px;
 }
 
@@ -30,9 +40,8 @@ h2 {
 
 p {
     display: flex;
-    
     margin: auto;
-    padding:20px;
+    padding: 20px;
     width: 683px;
     font-size: 18px;
     background: white;
@@ -43,7 +52,7 @@ footer {
     margin-top: 30px;
     padding: 15px;
     text-align: center;
-    background-color:white;
+    background-color: white;
 }
 
 a:link {
