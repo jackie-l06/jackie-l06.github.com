@@ -65,7 +65,7 @@ div {
     overflow-x: scroll;
     max-width: 64rem;
     margin: 0 auto;
-    margin-top: -332px;
+    margin-top: -330px;
     margin-left: 290px;
 }
 
@@ -173,10 +173,10 @@ div {
 
 /* experiment 2 */
 
-#overlap article,
-#overlap5 article,
-#overlap6 article,
-#overlap7 article {
+#overlap figure,
+#overlap5 figure,
+#overlap6 figure,
+#overlap7 figure {
     box-sizing: border-box;
     background-color: black;
     padding: 20px;
@@ -198,15 +198,15 @@ div {
     position: absolute;
     align-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    top: -65px;
+    top: -75px;
     left: 0;
     width: 100vw;
     height: 123vh;
 }
 
-#overlap2 article,
-#overlap3 article,
-#overlap4 article {
+#overlap2 figure,
+#overlap3 figure,
+#overlap4 figure {
     box-sizing: border-box;
     background-color: black;
     padding: 20px;
