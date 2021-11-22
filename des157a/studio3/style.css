@@ -1,0 +1,157 @@
+body {
+    background-color: white;
+    color: #977AA5;
+    font-family: 'Roboto Mono', monospace;
+    max-width: 1366px;
+    height: 768px;
+}
+
+
+/* 
+header {
+    height: 250px;
+    width: 1366px;
+} */
+
+
+/* h1 {
+    color: white;
+    font-size: 100px;
+    margin: 30px;
+    margin-left: 1200px;
+    background-image: linear-gradient(to right, red, rgb(255, 166, 0), yellow, rgb(91, 211, 91), rgba(51, 51, 255, 0.77), rgb(137, 83, 176), rgb(240, 167, 240));
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+} */
+
+h2 {
+    color: #977AA5;
+    font-size: 60px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+#line1 {
+    margin-left: 10%;
+    margin-top: -4.7%;
+    border-top: 6px solid #977AA5;
+    animation: draw-line 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes draw-line {
+    0% {
+        width: 0;
+    }
+    50% {
+        border-top: 6px solid #977AA5;
+    }
+    100% {
+        width: 156vh;
+        border-top: 6px solid #977AA5;
+    }
+}
+
+.container {
+    display: flex;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row {
+    padding: 200px;
+    margin-top: -200px;
+    margin-right: 17%;
+}
+
+.container .text {
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 70%;
+    font-size: 20px;
+    color: #fff;
+}
+
+button {
+    margin-left: 48.5%;
+    border: none;
+    padding: 10px;
+    background-color: #977AA5;
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h3 {
+    margin-left: 40%;
+    font-size: 30px;
+}
+
+.rule {
+    font-size: 20px;
+}
+
+#rollthe {
+    margin-left: 40%;
+    font-size: 20px;
+}
+
+#roll {
+    margin-left: 47.3%;
+    font-size: 20px;
+}
+
+.players {
+    margin-left: 50%;
+}
+
+#pass {
+    margin-left: 50.5%;
+}
+
+#gamecontrol {
+    margin-top: -200px;
+}
+
+div {
+    padding: 20px;
+}
+
+
+/* #gamecontrol,
+#score {
+    background-color: aliceblue;
+}
+
+#game {
+    background-color: #eaeaea;
+}
+
+#actions {
+    background-color: silver;
+} */
+
+header p {
+    text-align: center;
+}
+
+footer {
+    margin-top: 15%;
+    padding: 10px;
+    text-align: center;
+    background-color: #977AA5;
+    margin-left: 8%;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
