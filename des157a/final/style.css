@@ -7,7 +7,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     font-style: normal;
     font-weight: 600;
-    background-color: #d8c3e4;
+    background-color: #5B4B6B;
     color: white;
 }
 
@@ -40,7 +40,8 @@ h1 {
     h3 {
         margin-left: 100px;
         border: 2px solid white;
-        margin-right: 1080px;
+        margin-right: 1050px;
+        padding-left: 5px;
     }
     p {
         display: flex;
@@ -81,7 +82,7 @@ footer {
 }
 
 footer a:hover {
-    color: #ba99cd;
+    color: #5B4B6B
 }
 
 a:link {
