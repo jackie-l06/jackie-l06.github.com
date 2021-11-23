@@ -1,0 +1,254 @@
+body {
+    background-color: #D8E47D;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    max-width: 1366px;
+}
+
+header {
+    height: 250px;
+    width: 1366px;
+}
+
+h1 {
+    color: white;
+    font-size: 100px;
+    margin: 30px;
+    margin-left: 1150px;
+    background-image: linear-gradient(to right, red, rgb(255, 166, 0), yellow, rgb(91, 211, 91), rgba(51, 51, 255, 0.77), rgb(137, 83, 176), rgb(240, 167, 240));
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: -30px;
+    margin-left: 380px;
+}
+
+#line1 {
+    margin-left: 2.5%;
+    margin-top: -3.45%;
+    border-top: 6px solid white;
+    animation: draw-line 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes draw-line {
+    0% {
+        width: 0;
+    }
+    50% {
+        border-top: 6px solid white;
+    }
+    100% {
+        width: 49vh;
+        border-top: 6px solid white;
+    }
+}
+
+div {
+    margin-top: -3%;
+    margin-left: 5%;
+}
+
+#ca {
+    max-width: 100%;
+    width: 1250px;
+    height: auto;
+    padding-right: 100px;
+}
+
+#mycontainer {
+    display: flex;
+    overflow-x: scroll;
+    max-width: 64rem;
+    margin: 0 auto;
+    margin-top: -330px;
+    margin-left: 290px;
+}
+
+#mycontainer img {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#mycontainer img:hover {
+    opacity: 0.8;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    display: none;
+    /* Hidden by default */
+}
+
+
+/* experiement 1 */
+
+.window {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.overcontent #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 2px;
+    right: 13px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(187, 187, 187);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* experiment 2 */
+
+#overlap figure,
+#overlap5 figure,
+#overlap6 figure,
+#overlap7 figure {
+    box-sizing: border-box;
+    background-color: black;
+    padding: 20px;
+    width: 500px;
+    height: 670px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#overlap,
+#overlap2,
+#overlap3,
+#overlap4,
+#overlap5,
+#overlap6,
+#overlap7 {
+    position: absolute;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: -75px;
+    left: 0;
+    width: 100vw;
+    height: 123vh;
+}
+
+#overlap2 figure,
+#overlap3 figure,
+#overlap4 figure {
+    box-sizing: border-box;
+    background-color: black;
+    padding: 20px;
+    width: 880px;
+    height: 625px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.over-content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    padding-top: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+footer {
+    margin-top: 15%;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+    padding-right: 20px;
+}
+
+data {
+    margin-top: 20%;
+}
