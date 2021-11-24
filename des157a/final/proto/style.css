@@ -1,5 +1,5 @@
 body {
-    background-color: #D8E47D;
+    background-color: black;
     color: white;
     font-family: 'Roboto Mono', monospace;
     max-width: 1366px;
@@ -29,7 +29,7 @@ h2 {
 
 #line1 {
     margin-left: 2.5%;
-    margin-top: -3.45%;
+    margin-top: -8%;
     border-top: 6px solid white;
     animation: draw-line 5s;
     animation-fill-mode: forwards;
@@ -48,25 +48,44 @@ h2 {
     }
 }
 
+#menu ul {
+    list-style-type: none;
+    margin-top: -400px;
+    text-align: center;
+}
+
+#menu li a {
+    display: block;
+    width: 60px;
+    color: white;
+    margin-top: 100px;
+    padding-left: 1100px;
+}
+
 div {
     margin-top: -3%;
     margin-left: 5%;
 }
 
+#portrait {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 800px 800px;
+}
+
 #ca {
     max-width: 100%;
-    width: 1250px;
     height: auto;
-    padding-right: 100px;
+    padding-left: 200px;
 }
 
 #mycontainer {
     display: flex;
     overflow-x: scroll;
-    max-width: 64rem;
+    max-width: 20rem;
     margin: 0 auto;
-    margin-top: -330px;
-    margin-left: 290px;
+    margin-top: -309px;
+    margin-left: 500px;
 }
 
 #mycontainer img {
