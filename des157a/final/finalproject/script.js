@@ -41,20 +41,27 @@
     const selection = document.querySelectorAll(".open");
     selection.forEach(element => {
         const idName = element.id;
-        if (idName == "portrait") {
+        if (idName == "build") {
             element.addEventListener('click', pickSelection);
         } else if (idName == "fall") {
             element.addEventListener('click', pickSelection2);
-        } else if (idName == "sunset") {
+        } else if (idName == "portrait") {
             element.addEventListener('click', pickSelection3);
-        } else if (idName == "portrait2") {
+        } else if (idName == "girl") {
             element.addEventListener('click', pickSelection4);
         } else if (idName == "life") {
             element.addEventListener('click', pickSelection5);
         } else if (idName == "interior") {
             element.addEventListener('click', pickSelection6);
-        } else if (idName == "girl") {
+        } else if (idName == "door") {
             element.addEventListener('click', pickSelection7);
+        } else if (idName == "life2") {
+            element.addEventListener('click', pickSelection8);
+        } else if (idName == "portrait2") {
+            element.addEventListener('click', pickSelection9);
+        } else if (idName == "sunset") {
+            element.addEventListener('click', pickSelection10);
+
         }
     })
 
@@ -100,6 +107,24 @@
         document.getElementById('overlap7').className = 'showing';
     }
 
+    function pickSelection8(event) {
+        //getting the event object from the callback, target refers to the current element clicked.
+        event.preventDefault();
+        document.getElementById('overlap8').className = 'showing';
+    }
+
+    function pickSelection9(event) {
+        //getting the event object from the callback, target refers to the current element clicked.
+        event.preventDefault();
+        document.getElementById('overlap9').className = 'showing';
+    }
+
+    function pickSelection10(event) {
+        //getting the event object from the callback, target refers to the current element clicked.
+        event.preventDefault();
+        document.getElementById('overlap10').className = 'showing';
+    }
+
     // document.querySelector('.open').addEventListener('click', function() {
     //     event.preventDefault();
     //     document.getElementById('overlap').className = 'showing';
@@ -113,7 +138,7 @@
     function closeSelection(event) {
         //getting the event object from the callback, target refers to the current element clicked.
         event.preventDefault();
-        const selection3 = document.querySelectorAll("#overlap, #overlap2, #overlap3, #overlap4, #overlap5, #overlap6, #overlap7");
+        const selection3 = document.querySelectorAll("#overlap, #overlap2, #overlap3, #overlap4, #overlap5, #overlap6, #overlap7, #overlap8, #overlap9, #overlap10", );
         selection3.forEach(element => {
             element.className = 'hidden';
         })
