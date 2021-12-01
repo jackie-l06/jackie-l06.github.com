@@ -1,0 +1,84 @@
+body {
+    background-color: black;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    color: white;
+    height: 768px;
+    width: 1366px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.container {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    margin-left: 25px;
+}
+
+img {
+    border: 1px solid white;
+    padding: 3px;
+}
+
+.column::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+figure {
+    padding: 4px;
+    margin: auto;
+}
+
+figure img {
+    display: flex;
+    margin: auto;
+}
+
+figcaption {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    width: 683px;
+    font-size: 18px;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+.records {
+    margin-top: 400px;
+}
+
+section {
+    padding-top: 100px;
+}
+
+footer {
+    margin-left: 5%;
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+    padding-right: 20px;
+}
