@@ -86,7 +86,7 @@ h1 {
     opacity: 0.1;
 }
 
-.dotstyle-fillup li.current a::after {
+.dotstyle-fillup li.dotwhite a::after {
     height: 100%;
 }
 
